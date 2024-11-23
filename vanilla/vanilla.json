@@ -1,0 +1,37 @@
+{
+  "image_name": "itzg/minecraft-server",
+  "image_tag": "java21",
+  "template_name": "Vanilla Minecraft",
+  "thumbnail_url": "https://github.com/aarani/nmc-templates/blob/82ae9fc8ed43bb1917f763b12db25a773f04c07b/vanilla/vanilla.png",
+  "eula_needed": true,
+  "guest_volumes": [ "/data" ],
+  "variables":[
+    {
+      "name": "VERSION",
+      "description": "Game Version",
+      "acceptable_answers": [
+        "1.21.3","1.21.2", "1.21.1", "1.21", "1.20.6"
+      ]
+    },
+    {
+      "name": "DIFFICULTY",
+      "description": "The difficulty level",
+      "acceptable_answers": [ "peaceful", "easy", "normal", "hard" ]
+    },
+    {
+      "name": "ONLINE_MODE",
+      "description": "By default, server checks connecting players against Minecraft's account database. If you want to create an offline server or your server is not connected to the internet, you can disable this.",
+      "acceptable_answers": ["true", "false"]
+    }
+  ],
+  "env": {
+    "TYPE": "vanilla",
+    "EULA": "true",
+    "DIFFICULTY": "$DIFFICULTY$",
+    "ONLINE_MODE": "$ONLINE_MODE$",
+    "VERSION": "$VERSION$",
+    "EXISTING_WHITELIST_FILE" : "MERGE",
+    "EXISTING_OPS_FILE": "MERGE",
+    "MEMORY": "$MemoryInMb$M"
+  }
+}
