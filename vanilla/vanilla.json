@@ -2,7 +2,7 @@
   "image_name": "itzg/minecraft-server",
   "image_tag": "java21",
   "template_name": "Vanilla Minecraft",
-  "thumbnail_url": "https://github.com/aarani/nmc-templates/blob/82ae9fc8ed43bb1917f763b12db25a773f04c07b/vanilla/vanilla.png",
+  "thumbnail_url": "https://raw.githubusercontent.com/aarani/nmc-templates/82ae9fc8ed43bb1917f763b12db25a773f04c07b/vanilla/vanilla.png",
   "eula_needed": true,
   "guest_volumes": [ "/data" ],
   "variables":[
