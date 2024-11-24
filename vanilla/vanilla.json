@@ -7,29 +7,34 @@
   "guest_volumes": [ "/data" ],
   "variables":[
     {
-      "name": "VERSION",
+      "name": "Version",
       "description": "Game Version",
       "acceptable_answers": [
         "1.21.3","1.21.2", "1.21.1", "1.21", "1.20.6"
       ]
     },
     {
-      "name": "DIFFICULTY",
+      "name": "Difficulty",
       "description": "The difficulty level",
       "acceptable_answers": [ "peaceful", "easy", "normal", "hard" ]
     },
     {
-      "name": "ONLINE_MODE",
+      "name": "OnlineMode",
       "description": "By default, server checks connecting players against Minecraft's account database. If you want to create an offline server or your server is not connected to the internet, you can disable this.",
       "acceptable_answers": ["true", "false"]
+    },
+    {
+      "name": "MemoryInMb",
+      "description": "Memory available to server in megabytes",
+      "acceptable_answers": ["1024", "2048", "4096"]
     }
   ],
   "env": {
     "TYPE": "vanilla",
     "EULA": "true",
-    "DIFFICULTY": "$DIFFICULTY$",
-    "ONLINE_MODE": "$ONLINE_MODE$",
-    "VERSION": "$VERSION$",
+    "DIFFICULTY": "$Difficulty$",
+    "ONLINE_MODE": "$OnlineMode$",
+    "VERSION": "$Version$",
     "EXISTING_WHITELIST_FILE" : "MERGE",
     "EXISTING_OPS_FILE": "MERGE",
     "MEMORY": "$MemoryInMb$M"
